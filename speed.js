@@ -438,6 +438,10 @@ async function rewardItem(uuid, activeType, activeId = "", videoTimeLength = "")
             if (data.code === 0 && data.isSuccess) {
               $.score += data.data.reward
               console.log(`${$.taskName}任务完成，获得${data.data.reward}金币`)
+		if(data.data.reward <= 2){
+                  $.BLACK=1
+                  $.canStartNewItem = false
+              }    
             } else {
               console.log(`${$.taskName}任务失败，${data.message}`)
             }

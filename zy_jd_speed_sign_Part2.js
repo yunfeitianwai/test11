@@ -495,6 +495,7 @@ function wheelsHome() {
           if (err) {
             console.log(`${JSON.stringify(err)}`)
             console.log(`${$.name} API请求失败，请检查网路重试`)
+		  llAPIError=true;  
           } else {
             if (safeGet(data)) {
               data = JSON.parse(data);

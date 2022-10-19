@@ -58,7 +58,7 @@ const JD_API_HOST = 'https://api.m.jd.com/', actCode = 'visa-card-001';
         continue
       }
       await jdGlobal()
-      await $.wait(10*1000)
+      await $.wait(5*1000)
 	  
 	  if (llAPIError){
 		console.log(`黑IP了，赶紧重新拨号换个IP吧`);
@@ -89,8 +89,8 @@ async function jdGlobal() {
     await taskList()
     await queryJoy()
     //await signInit()
-    await cash()
-    await showMsg()
+    //await cash()
+    //await showMsg()
   } catch (e) {
     $.logErr(e)
   }

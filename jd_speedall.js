@@ -55,7 +55,7 @@ for (let i = 0; i < cookiesArr.length; i++) {
 	  
 	  if (llAPIError){
 		console.log(`黑IP了，赶紧重新拨号换个IP吧`);
-		break;
+		//break;
 	  }
     }
   }
@@ -70,11 +70,11 @@ for (let i = 0; i < cookiesArr.length; i++) {
 async function jdGlobal() {
   try {
 	 
-    await richManIndex()
+     //await richManIndex()
 
-    await wheelsHome()
-    await apTaskList()
-    await wheelsHome()
+     //await wheelsHome()
+     //await apTaskList()
+     //await wheelsHome()
 
     //await signInit()
     //await sign()

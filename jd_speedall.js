@@ -55,6 +55,7 @@ for (let i = 0; i < cookiesArr.length; i++) {
 	  
 	  if (llAPIError){
 		console.log(`黑IP了，赶紧重新拨号换个IP吧`);
+		llAPIError=false;
 		//break;
 	  }
     }

@@ -104,8 +104,8 @@ let NoNeedCodes = [];
 								lnrun++;				  
 							}
 							if(lnrun == 10){
-								console.log(`\n【访问接口次数达到10次，休息一分钟.....】\n`);
-								await $.wait(60*1000);
+								console.log(`\n【访问接口次数达到10次，休息5s.....】\n`);
+								await $.wait(5*1000);
 								lnrun = 0;
 							}
           }
@@ -148,7 +148,7 @@ let NoNeedCodes = [];
 						lnrun++;
 						await jdFruit();
 						if (lnrun == 3) {
-								console.log(`\n【访问接口次数达到3次，休息一分钟.....】\n`);
+								console.log(`\n【访问接口次数达到3次，休息10s.....】\n`);
 								await $.wait(10 * 1000);
 								lnrun = 0;
 						}
@@ -192,8 +192,8 @@ async function jdFruit() {
             //console.log(`初始化农场数据异常, 请登录京东 app查看农场0元水果功能是否正常,农场初始化数据!`);
             if ($.retry < 2) {
                 $.retry++
-                    console.log(`等待3秒后重试,第:${$.retry}次`);
-                await $.wait(3000);
+                    console.log(`等待2秒后重试,第:${$.retry}次`);
+                await $.wait(1000);
                 await jdFruit();
             }
         }

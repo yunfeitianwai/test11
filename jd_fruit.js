@@ -81,11 +81,11 @@ let lnrun = 0;
             lnrun++;
             await jdFruit();
 			if (lnrun == 3) {
-              console.log(`\n【访问接口次数达到3次，休息10s.....】\n`);
-              await $.wait(10 * 1000);
+              console.log(`\n【访问接口次数达到3次，休息5s.....】\n`);
+              await $.wait(5 * 1000);
               lnrun = 0;
 			}
-			await $.wait(10 * 1000);
+			await $.wait(5 * 1000);
         }
     }
     if ($.isNode() && allMessage && $.ctrTemp) {
